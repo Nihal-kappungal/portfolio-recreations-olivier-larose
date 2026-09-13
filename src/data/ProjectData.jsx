@@ -6,6 +6,7 @@ const projectImages = [projectImageOne, projectImageTwo, projectImageThree];
 
 export const projectData = [
   {
+    id: 1,
     project: "Tonic Performance",
     category: "Web design , Development",
     client: "Tonic Performance",
@@ -17,6 +18,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 2,
     project: "Tabula's Website",
     category: "Development",
     client: "Zypsy",
@@ -28,6 +30,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 3,
     project: "TradeRush",
     category: "Development",
     client: "N1",
@@ -39,6 +42,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 4,
     project: "MAD's Portfolio",
     category: "Development",
     client: "Mirror Progress",
@@ -50,6 +54,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 5,
     project: "Lightship's Website",
     category: "Development",
     client: "Locomotive",
@@ -61,6 +66,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 6,
     project: "Moodlabs Website",
     category: "Web design, Development",
     client: "Moodlabs",
@@ -72,6 +78,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 7,
     project: "Vooban's Portfolio",
     category: "Development",
     client: "Locomotive",
@@ -83,6 +90,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 8,
     project: "Dema's Website",
     category: "Development",
     client: "Dema",
@@ -94,6 +102,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 9,
     project: "K72's Blog",
     category: "Development",
     client: "Locomotive",
@@ -105,6 +114,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 10,
     project: "GoDaddy's Welcome Site",
     category: "Development",
     client: "Milk & Butter",
@@ -116,6 +126,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 11,
     project: "Baillat's Home Page",
     category: "Development",
     client: "Locomotive",
@@ -127,6 +138,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 12,
     project: "Lightship's store",
     category: "Development",
     client: "Locomotive",
@@ -138,6 +150,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 13,
     project: "Lab.zip Masonry Grid",
     category: "Development",
     client: "Lab.zip",
@@ -149,6 +162,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 14,
     project: "Sundae Creative",
     category: "Development",
     client: "Locomotive",
@@ -160,6 +174,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 15,
     project: "MAPP MTL",
     category: "Development",
     client: "Locomotive",
@@ -171,6 +186,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 16,
     project: "Populous",
     category: "Development",
     client: "Locomotive",
@@ -182,6 +198,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 17,
     project: "Lab.zip Landing Page",
     category: "Web design, Development",
     client: "Lab.zip",
@@ -193,6 +210,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 18,
     project: "Unity's Game Report",
     category: "Development",
     client: "Locomotive",
@@ -204,6 +222,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 19,
     project: "GPS Climat",
     category: "Development",
     client: "Locomotive",
@@ -215,6 +234,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 20,
     project: "Unity's Website",
     category: "Development",
     client: "Locomotive",
@@ -226,6 +246,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 21,
     project: "Niky",
     category: "Web design",
     client: "Niky",
@@ -237,6 +258,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 22,
     project: "Sensory House",
     category: "Web design, Development",
     client: "Sensory House",
@@ -248,6 +270,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 23,
     project: "Jovier e-shop",
     category: "Web design, Development",
     client: "Jovier",
@@ -259,6 +282,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 24,
     project: "One Forest",
     category: "Web design, Development",
     client: "One Forest",
@@ -270,6 +294,7 @@ export const projectData = [
     website: "",
   },
   {
+    id: 25,
     project: "Hydroflora e-shop",
     category: "Web design, Development",
     client: "Hydroflora",

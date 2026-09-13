@@ -5,11 +5,11 @@ import projectImageTwo from "../assets/Images/2.jpg";
 import projectImageThree from "../assets/Images/3.jpg";
 
 const Project = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(null);
 
   const handleDetails = (data) => {
-    setOpen(!open);
-    console.log("Project name : ", data);
+    setOpen(data);
+    // console.log("Project name : ", data);
   };
 
   return (
@@ -24,12 +24,12 @@ const Project = () => {
         </h4>
       </div>
       {/* item */}
-      {projectData.map((data, idx) => (
-        <React.Fragment key={idx}>
+      {projectData.map((data) => (
+        <React.Fragment key={data.id}>
           <div className="w-full h-px bg-white"></div>
           <div
             onClick={() => {
-              handleDetails(data);
+              handleDetails(data.id);
             }}
             className="w-full flex items-center justify-between uppercase py-4 text-white hover:bg-white transform-fill duration-300 ease-in-out hover:text-black"
           >
@@ -40,7 +40,7 @@ const Project = () => {
               {data.year}
             </h4>
           </div>
-          {open && (
+          {open === data.id && (
             <div
               onClick={() => {
                 handleDetails();
