@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import { projectData } from "../data/ProjectData";
-import projectImageOne from "../assets/Images/1.jpg";
-import projectImageTwo from "../assets/Images/2.jpg";
-import projectImageThree from "../assets/Images/3.jpg";
 
 const Project = () => {
   const [open, setOpen] = useState(null);
 
-  const handleDetails = (data) => {
-    setOpen(data);
+  const handleDetails = (id) => {
+    setOpen((currentOpen) => (currentOpen === id ? null : id));
     // console.log("Project name : ", data);
   };
 
@@ -41,12 +38,7 @@ const Project = () => {
             </h4>
           </div>
           {open === data.id && (
-            <div
-              onClick={() => {
-                handleDetails();
-              }}
-              className="w-full h-auto flex flex-col gap-2.5 items-start"
-            >
+            <div className="w-full h-auto flex flex-col gap-2.5 items-start">
               <p className="text-[2rem] w-[70%] mt-2.5 mb-1.5 text-white leading-none tracking-tighter">
                 {data.description}
               </p>

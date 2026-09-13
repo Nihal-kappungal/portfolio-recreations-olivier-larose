@@ -11,7 +11,7 @@ const Header = () => {
             <a href="#">Contact</a>
           </li>
           <li>
-            <a href="#">Linkdin</a>
+            <a href="#">Linkedin</a>
           </li>
         </ul>
       </nav>
