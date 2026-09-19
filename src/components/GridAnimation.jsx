@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Hero from "./Hero";
+import Header from "./Header";
 
 const GridAnimation = () => {
   const [windowWidth, setWindowWidth] = useState(0);

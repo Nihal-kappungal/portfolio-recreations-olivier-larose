@@ -1,12 +1,12 @@
-import React from "react";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
 import Project from "./components/Project";
 import GridAnimation from "./components/GridAnimation";
+import Loader from "./components/Loader";
 
 const App = () => {
   return (
     <div>
+      <Loader />
       <Header />
       <GridAnimation />
       <Project />
