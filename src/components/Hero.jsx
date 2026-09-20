@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
     <section className="sticky top-0 z-10 w-full min-h-screen flex flex-col items-center justify-center uppercase">
-      <p className="font-editorial text-[3.8vw] leading-[4.8vw]">
+      <p className="font-editorial text-[3.8vw] leading-[4.8vw] ">
         <span className="font-vibes text-[1.5em] mr-2.5">o</span>
         livier <span className="font-vibes text-[1.5em] mr-2.5">L</span>
         arose

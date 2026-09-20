@@ -1,6 +1,7 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { gsap } from "gsap";
 import { useRef, useState } from "react";
+import { lineVariants, rowVariants } from "../data/AnimationData";
 
 const ProjectItems = ({ data }) => {
   const [open, setOpen] = useState(null);
@@ -9,7 +10,9 @@ const ProjectItems = ({ data }) => {
     setOpen((currentOpen) => (currentOpen === id ? null : id));
   };
 
+  const cardRef = useRef(null);
   const bgRef = useRef(null);
+  const inView = useInView(cardRef, { once: true });
 
   const openCurtain = (e) => {
     const t = e.currentTarget.getBoundingClientRect();
@@ -27,13 +30,13 @@ const ProjectItems = ({ data }) => {
   return (
     <div>
       <motion.div
+        variants={lineVariants}
+        initial="initial"
+        animate={inView ? "open" : ""}
         className="h-px bg-white"
-        initial={{ width: 0 }}
-        whileInView={{ width: "100%" }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true }}
       />
       <div
+        ref={cardRef}
         onClick={() => {
           handleDetails(data.id);
         }}
@@ -46,18 +49,42 @@ const ProjectItems = ({ data }) => {
           className="absolute -top-full h-full w-full bg-white"
         />
         <div className="relative z-10 flex w-full items-center justify-between text-white group-hover:text-black group-hover:px-4">
-          <h4 className="w-[35vw] text-[1rem] leading-none tracking-tight font-medium">
+          <motion.p
+            custom={1}
+            variants={rowVariants}
+            initial="initial"
+            animate={inView ? "open" : ""}
+            className="relative w-[35vw] text-[1rem] leading-none tracking-tight font-medium"
+          >
             {data.project}
-          </h4>
-          <h4 className="w-[45vw] text-[1rem] leading-none tracking-tight font-medium">
+          </motion.p>
+          <motion.p
+            custom={2}
+            variants={rowVariants}
+            initial="initial"
+            animate={inView ? "open" : ""}
+            className="relative w-[45vw] text-[1rem] leading-none tracking-tight font-medium"
+          >
             {data.category}
-          </h4>
-          <h4 className="w-[25vw] text-[1rem] leading-none tracking-tight font-medium">
+          </motion.p>
+          <motion.p
+            custom={3}
+            variants={rowVariants}
+            initial="initial"
+            animate={inView ? "open" : ""}
+            className="relative w-[25vw] text-[1rem] leading-none tracking-tight font-medium"
+          >
             {data.client}
-          </h4>
-          <h4 className="w-[10vw] flex justify-end text-[1rem] leading-none tracking-tight font-medium">
+          </motion.p>
+          <motion.p
+            custom={4}
+            variants={rowVariants}
+            initial="initial"
+            animate={inView ? "open" : ""}
+            className="relative w-[10vw] flex justify-end text-[1rem] leading-none tracking-tight font-medium"
+          >
             {data.year}
-          </h4>
+          </motion.p>
         </div>
       </div>
       {open === data.id && (
