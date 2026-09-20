@@ -1,6 +1,14 @@
+import { motion, useScroll, useTransform } from "framer-motion";
+
 const Hero = () => {
+  const { scrollY } = useScroll();
+  const opacity = useTransform(scrollY, [0, 450], [1, 0]);
+
   return (
-    <section className="sticky top-0 z-10 w-full min-h-screen flex flex-col items-center justify-center uppercase">
+    <motion.section
+      style={{ opacity }}
+      className="sticky top-0 z-10 pointer-events-none w-full min-h-screen flex flex-col items-center justify-center uppercase"
+    >
       <p className="font-editorial text-[3.8vw] leading-[4.8vw] ">
         <span className="font-vibes text-[1.5em] mr-2.5">o</span>
         livier <span className="font-vibes text-[1.5em] mr-2.5">L</span>
@@ -23,7 +31,7 @@ const Hero = () => {
         2026
         <span className="font-mondwest text-[1.5em]">⚗✨</span>
       </p>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,15 +1,9 @@
 import { motion, useInView } from "framer-motion";
 import { gsap } from "gsap";
 import { useRef, useState } from "react";
-import { lineVariants, rowVariants } from "../data/AnimationData";
+import { bodyVariants, lineVariants, rowVariants } from "../data/AnimationData";
 
-const ProjectItems = ({ data }) => {
-  const [open, setOpen] = useState(null);
-
-  const handleDetails = (id) => {
-    setOpen((currentOpen) => (currentOpen === id ? null : id));
-  };
-
+const ProjectItems = ({ data, open, onToggle }) => {
   const cardRef = useRef(null);
   const bgRef = useRef(null);
   const inView = useInView(cardRef, { once: true });
@@ -37,9 +31,7 @@ const ProjectItems = ({ data }) => {
       />
       <div
         ref={cardRef}
-        onClick={() => {
-          handleDetails(data.id);
-        }}
+        onClick={() => onToggle(data.id)}
         onMouseEnter={openCurtain}
         onMouseLeave={closeCurtain}
         className=" group relative w-full flex items-center justify-between capitalize py-3 overflow-hidden cursor-pointer"
@@ -88,7 +80,12 @@ const ProjectItems = ({ data }) => {
         </div>
       </div>
       {open === data.id && (
-        <div className="w-full h-auto flex flex-col gap-2.5 items-start">
+        <motion.div
+          variants={bodyVariants}
+          initial="initial"
+          animate={open === data.id ? "open" : "close"}
+          className="w-full flex flex-col gap-2.5 items-start overflow-hidden"
+        >
           <p className="text-[2rem] w-[70%] mt-2.5 mb-1.5 text-white leading-none tracking-tighter">
             {data.description}
           </p>
@@ -114,7 +111,7 @@ const ProjectItems = ({ data }) => {
               />
             ))}
           </div>
-        </div>
+        </motion.div>
       )}
     </div>
   );
