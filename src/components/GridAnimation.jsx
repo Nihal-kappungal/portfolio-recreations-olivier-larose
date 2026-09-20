@@ -44,20 +44,14 @@ const GridAnimation = () => {
   console.log("width :", windowWidth);
 
   return (
-    <main className="relative flex h-screen items-center justify-center overflow-hidden ">
-      <div className="pointer-events-none relative z-10 mix-blend-difference">
-        <Hero />
-      </div>
-
-      <div className="absolute inset-0 flex h-full w-full overflow-hidden">
-        {windowWidth > 0 &&
-          [...Array(20).keys()].map((_, index) => (
-            <div key={index} className="w-[5vw] shrink-0">
-              {getBlocks()}
-            </div>
-          ))}
-      </div>
-    </main>
+    <div className="absolute z-11 mix-blend-difference inset-0 flex h-full w-full overflow-hidden">
+      {windowWidth > 0 &&
+        [...Array(20).keys()].map((_, index) => (
+          <div key={index} className="w-[5vw] shrink-0">
+            {getBlocks()}
+          </div>
+        ))}
+    </div>
   );
 };
 
