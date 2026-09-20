@@ -6,7 +6,7 @@ const Project = () => {
   const [open, setOpen] = useState(null);
 
   return (
-    <section className="relative w-full min-h-screen z-25 px-5 pt-40 pb-15 bg-[#121212]">
+    <section className="relative w-full min-h-screen z-25 px-5 pt-45 pb-15 bg-[#121212]">
       <div className="w-full flex items-center justify-between uppercase py-2 ">
         <h4 className="w-[35vw] text-xs text-zinc-400 font-medium">Project</h4>
         <h4 className="w-[45vw] text-xs text-zinc-400 font-medium">category</h4>
