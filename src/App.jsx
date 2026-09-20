@@ -7,7 +7,6 @@ const App = () => {
   return (
     <div>
       <Loader />
-      <Header />
       <GridAnimation />
       <Project />
     </div>
