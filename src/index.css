@@ -44,3 +44,12 @@ html {
   background-color: rgb(18, 18, 18);
   color: #fff;
 }
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
