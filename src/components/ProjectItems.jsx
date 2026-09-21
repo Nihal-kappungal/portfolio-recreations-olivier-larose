@@ -38,7 +38,7 @@ const ProjectItems = ({ data, open, onToggle }) => {
       >
         <div
           ref={bgRef}
-          className="absolute -top-full h-full w-full bg-white"
+          className="absolute -top-full h-full w-full md:bg-white"
         />
         <div className="relative z-10 flex w-full items-center justify-between text-white group-hover:text-black group-hover:px-4">
           <motion.p
