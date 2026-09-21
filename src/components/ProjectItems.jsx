@@ -46,7 +46,7 @@ const ProjectItems = ({ data, open, onToggle }) => {
             variants={rowVariants}
             initial="initial"
             animate={inView ? "open" : ""}
-            className="relative w-[35vw] text-[1rem] leading-none tracking-tight font-medium"
+            className="relative w-[35vw] text-[1rem] leading-none tracking-tight font-medium whitespace-nowrap"
           >
             {data.project}
           </motion.p>
@@ -55,7 +55,7 @@ const ProjectItems = ({ data, open, onToggle }) => {
             variants={rowVariants}
             initial="initial"
             animate={inView ? "open" : ""}
-            className="relative w-[45vw] text-[1rem] leading-none tracking-tight font-medium"
+            className="relative hidden md:block w-[45vw] text-[1rem] leading-none tracking-tight font-medium"
           >
             {data.category}
           </motion.p>
@@ -64,7 +64,7 @@ const ProjectItems = ({ data, open, onToggle }) => {
             variants={rowVariants}
             initial="initial"
             animate={inView ? "open" : ""}
-            className="relative w-[25vw] text-[1rem] leading-none tracking-tight font-medium"
+            className="relative hidden md:block w-[25vw] text-[1rem] leading-none tracking-tight font-medium"
           >
             {data.client}
           </motion.p>
@@ -86,7 +86,7 @@ const ProjectItems = ({ data, open, onToggle }) => {
           animate={open === data.id ? "open" : "close"}
           className="w-full flex flex-col gap-2.5 items-start overflow-hidden"
         >
-          <p className="text-[2rem] w-[70%] mt-2.5 mb-1.5 text-white leading-none tracking-tighter">
+          <p className="text-[clamp(1.4rem,3vw,2rem)] w-full lg:w-[70%] mt-2.5 mb-1.5 text-white leading-none tracking-tighter">
             {data.description}
           </p>
           <a
@@ -95,17 +95,17 @@ const ProjectItems = ({ data, open, onToggle }) => {
           >
             See Website
           </a>
-          <div className="flex flex-col gap-1.5 mb-2.5">
+          <div className="flex lg:flex-col gap-3 lg:gap-1.5 mb-2.5">
             {data.services.map((service) => (
               <p className="flex items-center text-md capitalize before:content-[''] before:inline-block before:w-2 before:h-2 before:rounded-full before:bg-white before:mr-2">
                 {service}
               </p>
             ))}
           </div>
-          <div className="grid grid-cols-3 gap-2.5 mt-5 mb-10 w-full h-[35vh]">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-2.5 mt-5 mb-10 w-full h-auto lg:h-[35vh]">
             {data.images.map((image) => (
               <img
-                className="w-full h-full object-contain"
+                className="w-full sm:h-[22vh] lg:h-full object-contain"
                 src={image}
                 alt=""
               />
